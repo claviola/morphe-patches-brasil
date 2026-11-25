@@ -26,11 +26,11 @@ Click the button below, or manually add this repo url to Morphe Manager: https:/
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
+> **[v1.0.0-dev.1](https://github.com/claviola/morphe-patches-brasil/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`dev`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**11 patches** across **1 app**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
 
-<!-- Do not modify this section by hand. The patch list is generated when release.yml creates a new release. -->
-
-#### The list of patches is shown here after the first release.
-
+| # | App | Patches | Version | Package |
+|---|---|---|---|---|
+| 1 | [**Globoplay (Android TV)**](PATCHES.md#globoplay-android-tv-comgloboglobotv) | 11 | `2.358.0` | [`com.globo.globotv`](https://play.google.com/store/apps/details?id=com.globo.globotv) |
 <!-- PATCHES_END -->
 
 ### 🛠️ Building locally

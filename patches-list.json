@@ -1,5 +1,470 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "0.0.0",
-  "patches": []
+  "version": "1.0.0-dev.1",
+  "patches": [
+    {
+      "name": "Clone Globoplay",
+      "description": "Renames the package to com.globo.globotv.mod and the launcher label to \"Globoplay Mod\" so the patched app installs alongside the stock app with its own data and login. Expected limits: Google sign-in, Play Billing, Firebase (including Remote Config) and Play Integrity are keyed to the original package name and signature and may not work in the clone.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable Firebase reporting",
+      "description": "Stops the app force-enabling Crashlytics collection and disables Firebase Analytics, Crashlytics and Performance reporting via manifest flags.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable live ad insertion",
+      "description": "Keeps live channels on the plain broadcast stream instead of a Google Dynamic Ad Insertion session, so no ads are substituted and no viewer identifiers go to Google for it. Commercials that are part of the broadcast itself remain.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable screensaver",
+      "description": "Disables the in-app screensaver and its background content worker.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable telemetry",
+      "description": "Disables Horizon, Firebase Analytics wrapper, NPAW, AppsFlyer, GloboID TrackID and player telemetry plugins, blocks telemetry hosts in OkHttp, and stops the app's A/B-test requests that carry account identifiers.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "blockPlayerPlugins",
+          "title": "Block player telemetry plugins",
+          "description": "Prevent the player from registering the Horizon, Youbora, GA and hits telemetry plugins. The traffic is already silenced by the other hooks; turn this off if playback misbehaves.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": true,
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Hide ads",
+      "description": "Disables preroll/midroll, pause, takeover, frame and binge ads, removes the Google Mobile Ads init provider and blocks the ad-configuration API (multicloud-ads-api.globo.com).",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Hide polls",
+      "description": "Disables interactive poll panels via the remote-config flag.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Hide shoppable overlays",
+      "description": "Disables shoppable product overlays via the remote-config flag.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Hide welcome ads",
+      "description": "Disables the welcome/splash ad on Android TV via the remote-config flag.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Set region",
+      "description": "Overrides the coordinates used for Globo's regional affiliate lookup and for the video-session location. Choose one of the 117 known affiliates or custom coordinates. Confirmed on a device: the programme guide and the live regional stream both followed the injected coordinates (tested for two affiliates from one exit location).",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "region",
+          "title": "Regional affiliate",
+          "description": "Regional affiliate whose representative coordinates are injected, or custom coordinates.",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "-23.5505,-46.6333",
+          "values": {
+            "AC — REDE AMAZONICA RIO BRANCO (ACR)": "-9.9754,-67.8249",
+            "AC — REDE AMAZONICA CRUZEIRO DO SUL (CZS)": "-7.63,-72.67",
+            "AL — TV ASA BRANCA ALAGOAS (MAC)": "-9.6658,-35.7353",
+            "AM — REDE AMAZONICA COARI (COI)": "-3.354,-64.711",
+            "AM — REDE AMAZONICA HUMAITA (HUM)": "-7.51,-63.02",
+            "AM — REDE AMAZONICA ITACOATIARA (ITC)": "-3.143,-58.444",
+            "AM — REDE AMAZONICA MANAUS (MAN)": "-3.119,-60.0217",
+            "AM — REDE AMAZONICA PARINTINS (PIN)": "-2.628,-56.735",
+            "AP — REDE AMAZONICA MACAPA (AMP)": "0.0349,-51.0694",
+            "BA — TV OESTE (BAR)": "-12.152,-45.0",
+            "BA — TV SUBAE (FEI)": "-12.266,-38.966",
+            "BA — TV SANTA CRUZ (ITA)": "-14.785,-39.28",
+            "BA — TV SAO FRANCISCO (JUA)": "-9.411,-40.503",
+            "BA — TV BAHIA (SAL)": "-12.9777,-38.5016",
+            "BA — TV SUDOESTE (VDC)": "-14.861,-40.844",
+            "CE — TV VERDES MARES (CE1)": "-3.7319,-38.5267",
+            "CE — TV VERDES MARES CARIRI (CE2)": "-7.213,-39.315",
+            "DF — GLOBO BRASILIA (DF)": "-15.7939,-47.8828",
+            "ES — TV GAZETA SUL (CAC)": "-20.848,-41.112",
+            "ES — TV GAZETA NORTE (ES2)": "-19.391,-40.072",
+            "ES — TV GAZETA (VIT)": "-20.3155,-40.3128",
+            "GO — TV ANHANGUERA GOIANIA TV ANHANGUERA (GO1)": "-16.6869,-49.2648",
+            "GO — TV ANHANGUERA ANAPOLIS (GO2)": "-16.328,-48.953",
+            "GO — TV ANHANGUERA ITUMBIARA (IBI)": "-18.419,-49.215",
+            "GO — TV ANHANGUERA JATAI (JAT)": "-17.879,-51.714",
+            "GO — TV ANHANGUERA LUZIANIA (LZA)": "-16.2525,-47.9503",
+            "GO — TV ANHANGUERA PORANGATU (PRT)": "-13.44,-49.15",
+            "GO — TV ANHANGUERA RIO VERDE (RVD)": "-17.798,-50.928",
+            "MA — TV MIRANTE BALSAS (BAS)": "-7.532,-46.035",
+            "MA — TV MIRANTE COCAIS (CDO)": "-4.858,-43.356",
+            "MA — TV MIRANTE IMPERATRIZ (IMP)": "-5.526,-47.491",
+            "MA — TV MIRANTE SAO LUIS (MA1)": "-2.5307,-44.3068",
+            "MG — TV INTEGRACAO ARAXA (AXA)": "-19.5934,-46.9403",
+            "MG — GLOBO MINAS (BH)": "-19.9167,-43.9345",
+            "MG — INTER TV DOS VALES (FAB)": "-18.851,-41.955",
+            "MG — TV INTEGRACAO ITUIUTABA (ITU)": "-18.969,-49.463",
+            "MG — TV INTEGRACAO JUIZ DE FORA (JF)": "-21.764,-43.35",
+            "MG — INTER TV GRANDE MINAS (MTC)": "-16.735,-43.861",
+            "MG — TV INTEGRACAO UBERABA (UBA)": "-19.748,-47.932",
+            "MG — TV INTEGRACAO UBERLANDIA (UBE)": "-18.918,-48.277",
+            "MG — EPTV SUL DE MINAS (VAR)": "-22.23,-45.936",
+            "MS — TV MORENA CAMPO GRANDE (MS1)": "-20.4697,-54.6201",
+            "MS — TV MORENA CORUMBA (MS2)": "-19.009,-57.653",
+            "MS — TV MORENA PONTA PORA (POR)": "-22.221,-54.806",
+            "MT — TV CENTRO AMERICA CUIABA (MT)": "-15.601,-56.0974",
+            "MT — TV CENTRO AMERICA RONDONOPOLIS (ROD)": "-16.47,-54.635",
+            "MT — TV CENTRO AMERICA SINOP (SNO)": "-11.86,-55.505",
+            "MT — TV CENTRO AMERICA TANGARA DA SERRA (TGS)": "-14.6229,-57.4933",
+            "PA — TV LIBERAL ALTAMIRA (ALT)": "-3.203,-52.206",
+            "PA — TV LIBERAL BELEM (BEL)": "-1.4558,-48.5039",
+            "PA — TV LIBERAL CASTANHAL (CAS)": "-1.297,-47.922",
+            "PA — TV LIBERAL MARABA (MAB)": "-5.35,-49.117",
+            "PA — TV LIBERAL PARAUAPEBAS (PUP)": "-6.067,-49.902",
+            "PA — TV LIBERAL REDENCAO (RDC)": "-8.028,-50.031",
+            "PA — TV TAPAJOS (TAP)": "-2.443,-54.708",
+            "PB — TV PARAIBA (CPG)": "-7.2306,-35.8811",
+            "PB — TV CABO BRANCO (JP)": "-7.1195,-34.845",
+            "PE — TV ASA BRANCA (CRR)": "-8.283,-35.976",
+            "PE — GLOBO NORDESTE (PE1)": "-8.0476,-34.877",
+            "PE — TV GRANDE RIO (PET)": "-9.389,-40.503",
+            "PI — TV ALVORADA DO SUL (FNO)": "-7.077,-41.467",
+            "PI — TV CLUBE (TER)": "-5.0892,-42.8019",
+            "PR — RPC CASCAVEL (CAV)": "-24.955,-53.455",
+            "PR — RPC CURITIBA (CUR)": "-25.4296,-49.2713",
+            "PR — RPC FOZ DO IGUACU (FOZ)": "-25.516,-54.585",
+            "PR — RPC GUARAPUAVA (GAV)": "-25.395,-51.458",
+            "PR — RPC LONDRINA (LON)": "-23.304,-51.169",
+            "PR — RPC MARINGA (MAR)": "-23.42,-51.933",
+            "PR — RPC PONTA GROSSA (PGR)": "-25.095,-50.162",
+            "PR — RPC PARANAVAI (PR3)": "-23.081,-52.465",
+            "RJ — INTER TV ALTO LITORAL (CAB)": "-22.889,-42.029",
+            "RJ — INTER TV PLANICIE (FLU)": "-21.762,-41.318",
+            "RJ — INTER TV SERRA MAR (FRI)": "-22.511,-43.178",
+            "RJ — TV RIO SUL (RES)": "-22.52,-44.104",
+            "RJ — GLOBO RIO (RJ)": "-22.9068,-43.1729",
+            "RN — INTER TV COSTA BRANCA (NA2)": "-5.187,-37.344",
+            "RN — INTER TV CABUGI (NAT)": "-5.7945,-35.211",
+            "RO — REDE AMAZONICA ARIQUEMES (ARI)": "-9.913,-63.04",
+            "RO — REDE AMAZONICA CACOAL (COA)": "-11.4386,-61.4472",
+            "RO — REDE AMAZONICA JI-PARANA (JIP)": "-10.878,-61.951",
+            "RO — REDE AMAZONICA PORTO VELHO (RON)": "-8.7619,-63.9039",
+            "RO — REDE AMAZONICA VILHENA (VLH)": "-12.7406,-60.1458",
+            "RR — REDE AMAZONICA RORAINOPOLIS (ROL)": "1.816,-61.127",
+            "RR — REDE AMAZONICA BOA VISTA (ROR)": "2.8235,-60.6758",
+            "RS — RBS TV BAGE (BAG)": "-31.331,-54.106",
+            "RS — RBS TV CRUZ ALTA (CAL)": "-28.645,-53.606",
+            "RS — RBS TV CAXIAS DO SUL (CXS)": "-29.168,-51.179",
+            "RS — RBS TV ERECHIM (ERE)": "-27.634,-52.274",
+            "RS — RBS TV PELOTAS (PEL)": "-31.765,-52.337",
+            "RS — RBS TV PASSO FUNDO (PFO)": "-28.262,-52.409",
+            "RS — RBS TV RIO GRANDE (RGE)": "-32.035,-52.099",
+            "RS — RBS TV PORTO ALEGRE (RS1)": "-30.0346,-51.2177",
+            "RS — RBS TV SANTA MARIA (SMA)": "-29.684,-53.806",
+            "RS — RBS TV SANTA CRUZ (STC)": "-30.0392,-52.8939",
+            "RS — RBS TV SANTA ROSA (STR)": "-27.87,-54.481",
+            "RS — RBS TV URUGUAIANA (URU)": "-29.754,-57.088",
+            "SC — NSC TV BLUMENAU (BLU)": "-26.919,-49.066",
+            "SC — NSC TV CHAPECO (CHA)": "-27.1,-52.615",
+            "SC — NSC TV CRICIUMA (CRI)": "-28.677,-49.369",
+            "SC — NSC TV CENTRO-OESTE (JOA)": "-27.816,-50.326",
+            "SC — NSC TV JOINVILLE (JOI)": "-26.304,-48.846",
+            "SC — NSC TV FLORIANOPOLIS (SC1)": "-27.5954,-48.548",
+            "SE — TV SERGIPE (SER)": "-10.9472,-37.0731",
+            "SP — TV TEM BAURU (BAU)": "-22.324,-49.087",
+            "SP — EPTV CAMPINAS (CAM)": "-22.905,-47.061",
+            "SP — TV TEM ITAPETININGA (ITP)": "-23.5917,-48.0531",
+            "SP — EPTV RIBEIRAO (RIB)": "-21.17,-47.81",
+            "SP — TV TRIBUNA (SAN)": "-23.961,-46.332",
+            "SP — EPTV CENTRAL (SCA)": "-22.0087,-47.8909",
+            "SP — VANGUARDA SAO JOSE DOS CAMPOS (SJC)": "-23.189,-45.884",
+            "SP — TV TEM SAO JOSE DO RIO PRETO (SJR)": "-20.82,-49.379",
+            "SP — TV TEM SOROCABA (SOR)": "-23.501,-47.458",
+            "SP — GLOBO SAO PAULO (SP1)": "-23.5505,-46.6333",
+            "SP — VANGUARDA TAUBATE (TAU)": "-23.024,-45.555",
+            "TO — TV ANHANGUERA GURUPI (GUR)": "-11.729,-49.068",
+            "TO — TV ANHANGUERA ARAGUAINA (INA)": "-7.192,-48.207",
+            "TO — TV ANHANGUERA PALMAS (PAL)": "-10.184,-48.3336",
+            "Custom coordinates": "custom"
+          }
+        },
+        {
+          "key": "customLatitude",
+          "title": "Custom latitude (only for custom coordinates)",
+          "description": "Used only when the regional affiliate option is set to Custom coordinates; ignored otherwise. Latitude of the place whose affiliate you want, -90 to 90.",
+          "required": false,
+          "type": "kotlin.String",
+          "default": null,
+          "values": null
+        },
+        {
+          "key": "customLongitude",
+          "title": "Custom longitude (only for custom coordinates)",
+          "description": "Used only when the regional affiliate option is set to Custom coordinates; ignored otherwise. Longitude of the place whose affiliate you want, -180 to 180.",
+          "required": false,
+          "type": "kotlin.String",
+          "default": null,
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Trust custom certificate authority",
+      "description": "Debug/testing patch: trusts an additional certificate authority so the app's own HTTPS traffic can be inspected with a proxy such as mitmproxy. Weakens TLS verification; do not use for normal viewing. If a CA certificate file is given it is embedded in the APK and trusted alongside the system store; otherwise the user CA store is trusted.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.globo.globotv",
+          "name": "Globoplay (Android TV)",
+          "description": null,
+          "apkFileType": "APKM",
+          "appIconColor": "#F40034",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "2.358.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "caCertificate",
+          "title": "CA certificate (PEM)",
+          "description": "Path to a PEM-encoded CA certificate to embed and trust (for example ~/.mitmproxy/mitmproxy-ca-cert.pem). If unset, the user CA store is trusted instead.",
+          "required": false,
+          "type": "kotlin.String",
+          "default": null,
+          "values": null
+        }
+      ]
+    }
+  ]
 }
