@@ -132,3 +132,11 @@ node_modules/
 # Ignore IDEA files
 .idea/
 local.properties
+
+### Local agent setup
+AGENTS.local.md
+
+### App files (never commit)
+*.apkm
+*.xapk
+*.idsig

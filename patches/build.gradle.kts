@@ -10,17 +10,16 @@ plugins {
     alias(libs.plugins.animalsniffer)
 }
 
-group = "app.template"
+group = "brasil.morphe.patches"
 
 patches {
-    // TODO: Update this section with your project details.
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
-        contact = "na"
-        website = "na"
+        name = "Patches for Brazilian apps"
+        description = "Patches for Brazilian apps, for use with Morphe"
+        source = "git@github.com:claviola/morphe-patches-brasil.git"
+        author = "claviola"
+        contact = "https://github.com/claviola/morphe-patches-brasil/issues"
+        website = "https://github.com/claviola/morphe-patches-brasil"
         license = "GPLv3"
     }
 }
